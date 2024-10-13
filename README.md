@@ -20,7 +20,16 @@ Quick installation of mining on Android Phones
 lscpu
 ```
 If the output doesn't show `Architecture: aarch64` or `CPU op-mode(s): 32-bit, 64-bit`, then do not bother to continue. Your phone is not running a 64-bit OS.
-
+```
+pkg install proot-distro -y && proot-distro install ubuntu && pkg install nano  && cd /data/data/com.termux/files/usr/etc && nano profile
+```bash
+เพิ่มในบรรทัดสุดท้าย
+```
+proot-distro login ubuntu
+```
+แล้ว save โดย ctrl x ตอบ y
+```
+ปิด แล้วเปิด termux
 ```bash
 curl -o- -k https://raw.githubusercontent.com/TheRetroMike/VerusCliMining/main/install.sh | bash
 ```
