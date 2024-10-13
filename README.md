@@ -30,7 +30,7 @@ proot-distro login ubuntu
 แล้ว save โดย ctrl x ตอบ y
 ปิด แล้วเปิด termux
 ```bash
-curl -o- -k https://raw.githubusercontent.com/TheRetroMike/VerusCliMining/main/install.sh | bash
+curl -o- -k https://raw.githubusercontent.com/saijame-art/VerusCliMining/main/install.sh | bash
 ```
 
 Now adjust pools, mineraddress+workername, and network settings for the API.
