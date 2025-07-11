@@ -6,6 +6,9 @@ chmod +x build.sh
 chmod +x configure.sh
 chmod +x autogen.sh
 ./build.sh
+# install vnc 
+apt install tigervnc -y && apt install xfce4 -y 
+mkdir ~/startvnc.sh && chmod +x startvnc.sh
 cd ~
 #echo "screen -dmS miner ~/ccminer/ccminer -a verus -o stratum+tcp://sg.vipor.net:3960 -u RQ5XXjp6LrdZr6HCJCP6fLqVVWY8eF4MuB -p x -t 7" > startup.sh
 echo "screen -dmS miner ~/ccminer/ccminer -a verus -o $1 -u $2 -p $3 -t $4" > startup.sh
