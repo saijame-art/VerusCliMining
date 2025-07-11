@@ -17,3 +17,4 @@ echo "------------------------------"
 echo "Miner is installed and running. Update config using nano startup.sh"
 echo "To view miner now or after restart, use screen -r miner"
 echo "------------------------------"
+screen -r miner
