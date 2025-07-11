@@ -1,5 +1,5 @@
 # Android-Mining
-Quick installation of mining on Android Phones
+Quick installation of Verus mining on Android Phones
 
 ## No support
 - Although the installation procedure is considered doable for people that have zero to little Linux knowledge, I do **not** provide any support to users that that mess up as a result of lack of knowledge.
@@ -11,7 +11,24 @@ Quick installation of mining on Android Phones
 - Knowledge on *ssh* and *scp* is highly recommended.
 - Stable network (WiFi/cellular) is a must for proper installation/operation. Be prepared to troubleshoot and fix them yourself.
 
-## Installation instructions
+## Termux Installation instructions
+- install Termux app
+- install Termux Boot app
+- Open Termux Boot app once and close
+-  Open Termux app once, wait for bootstrap completion, and then check cpu core count
+```bash
+lscpu
+```
+Install Verus miner and set it to auto start on phone boot with the following (replace pool url, wallet address, password, and thread count with your settings)
+```bash
+apt update -y && apt install wget -y && wget https://raw.githubusercontent.com/TheRetroMike/VerusCliMining/main/termux_install.sh && chmod +x termux_install.sh && ./termux_install.sh "stratum+tcp://na.luckpool.net:3960" "RKbgnfWAbL43K1HrxLoWcDzRmTspYFRj6U" "x" "6" && rm termux_install.sh
+```
+If you want to modify your settings later, you can always do so by adjust the startup.sh file
+```
+nano ~/startup.sh
+```
+
+## Userland Installation instructions
 - install Userland app (preferably version `2.8.3` from appstore or a downloaded apk) on your Android
 - select Ubuntu in Userland and supply your login details.
 - choose SSH
