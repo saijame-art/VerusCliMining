@@ -21,7 +21,7 @@ lscpu
 ```
 Install Verus miner and set it to auto start on phone boot with the following (replace pool url, wallet address, password, and thread count with your settings)
 ```bash
-apt update -y && apt install wget -y && wget https://raw.githubusercontent.com/saijame-art/VerusCliMining/main/termux_install.sh && chmod +x termux_install.sh && ./termux_install.sh "stratum+tcp://sg.vipor.net:5040" "RQ5XXjp6LrdZr6HCJCP6fLqVVWY8eF4MuB" "x" "7" && rm termux_install.sh
+apt update -y && apt install wget -y && wget https://raw.githubusercontent.com/saijame-art/VerusCliMining/main/termux_install.sh && chmod +x termux_install.sh && ./termux_install.sh "stratum+tcp://sg.vipor.net:5040" "RQ5XXjp6LrdZr6HCJCP6fLqVVWY8eF4MuB.A83-006" "x" "7" && rm termux_install.sh
 ```
 If you want to modify your settings later, you can always do so by adjust the startup.sh file
 ```
