@@ -19,7 +19,18 @@ chmod +x ~/ccminer/ccminer
 
 cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
-~/ccminer/ccminer -c ~/ccminer/config.json
+# Define a unique worker name for each miner (set this differently on each machine)
+WORKER_NAME="A83-003"  # Change this for each miner
+#remove old_onlineconfig.json file first and download a new one.
+rm -rf ~/ccminer/onlineconfig.json
+# Download the config file from GitHub
+curl -o ~/ccminer/onlineconfig.json https://raw.githubusercontent.com/saijame-art/miner/refs/heads/main/onlineconfig.json
+
+# Replace "user" field in onlineconfig.json with the wallet and unique worker name
+sed -i "s/\"user\": \"[^\"]*\"/\"user\": \"RQ5XXjp6LrdZr6HCJCP6fLqVVWY8eF4MuB.$WORKER_NAME\"/" ~/ccminer/onlineconfig.json
+
+# Run ccminer with the updated config file
+~/ccminer/ccminer -c ~/ccminer/onlineconfig.json
 EOF
 chmod +x start.sh
 
